@@ -4,9 +4,11 @@ Linux is powerfull, but youre life will be better if you have configured your sh
 ## Shell 
 
 Those files can be put in your home, or system-wide. I personally use them as system-wide configuration, with Debian. If you use it with another system, you may need some ajustments, or even better, you can pick some snippets and directly add them to your configuration files.
-Yeah, so what's upp? Basically, the first point was to make the difference between bash and login. So I updated the file to follow this rule. I made some clean, and I put some comments almost everywhere. 
+
 
 ### Features
+
+Yeah, so what's upp? Basically, the first point was to make the difference between bash and login. So I updated the file to follow this rule. I made some clean, and I put some comments almost everywhere. 
 
 Login feature:
 * When changing user, a little description appears about the user, it's permission, home, uid, gid, if he has some keys in its home ... Only informational, but can make your life easier.
@@ -33,6 +35,8 @@ Colors for:
 * user: green if you are root, white if you are a normal user, yellow if you are a daemon user and red if the account does not support shell
 * double colon: Colon is normally white, but it become yellow if the partition is 80% used, red if 95% used, and yellow if you are on Kernel filesystem (like ``/proc``, ``/sys``)
 * path: Usually in blue, it becomes yellow if you cannot write on this path (soooo usefull when you move your ``CWD`` from another terminal)
+
+Note: This prompt can be buggy, especially when your system become slow, or when you are on slow responding system. If the prompt detects the system is slow, it will fall back to a simpler prompt. It is still experimental, but I didn't have any issue with that for now.
 
 ## Package list
 
