@@ -1,12 +1,12 @@
 Linux is powerfull, but youre life will be better if you have configured your shell and all application you use.
 
-## Installation
+
+## Shell 
 
 Those files can be put in your home, or system-wide. I personally use them as system-wide configuration, with Debian. If you use it with another system, you may need some ajustments, or even better, you can pick some snippets and directly add them to your configuration files.
-
-## Features
-
 Yeah, so what's upp? Basically, the first point was to make the difference between bash and login. So I updated the file to follow this rule. I made some clean, and I put some comments almost everywhere. 
+
+### Features
 
 Login feature:
 * When changing user, a little description appears about the user, it's permission, home, uid, gid, if he has some keys in its home ... Only informational, but can make your life easier.
@@ -21,7 +21,7 @@ Bash features:
 * Preset of programms for coloration (Less, tail, diff)
 * Bash behaviour configuration
 
-## Prompt usage
+### Prompt usage
 Example (in black and white):
 ```
 jez@jezbordel:~/git/linux-personal-env/bash/profile.d tail -f /var/log/syslog & ; cat /IDontExists.txt
@@ -34,10 +34,14 @@ Colors for:
 * double colon: Colon is normally white, but it become yellow if the partition is 80% used, red if 95% used, and yellow if you are on Kernel filesystem (like ``/proc``, ``/sys``)
 * path: Usually in blue, it becomes yellow if you cannot write on this path (soooo usefull when you move your ``CWD`` from another terminal)
 
+## Package list
+
+It is a list of basic package I personnally use on my Debian systems. Feel free to google them to know what they do, and to adapt the package name to your distro.
+
 
 ## Notes
 
-This may be improved to support git, svn, whatever shell. I guess I will need it later, so it may be implemented in some days. The point is nothing special, bu you might be interested to see how I set up the $PS1 variable.
+This may be improved to support git, svn, whatever shell. I guess I will need it later, so it may be implemented in some days. The point is nothing special, bu you might be interested to see how I set up the $PS1 variable. The default package (Debian) list can be also useful.
 
 Sorry for the gramma spelling, I don't like to read again what I wrote :p (except or code)
 
