@@ -5,7 +5,7 @@
 # To live try:
 # source <( curl https://raw.githubusercontent.com/mrjk/linux-personal-env/master/bash/bash.bashrc)
 # To install locally
-# curl https://raw.githubusercontent.com/mrjk/linux-personal-env/master/bash/bash.bashrc > ~/.bashrc
+# curl https://raw.githubusercontent.com/mrjk/linux-personal-env/master/bash/bash.bashrc > ~/.bashrc && source .bashrc
 
 # If not running interactively, don't do anything
 case $- in
