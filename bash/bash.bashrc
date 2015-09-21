@@ -373,7 +373,7 @@ bash_alias () {
 
 
 ##########################
-# Func: Command not found
+# Func: Completion on SSH Hosts
 ##########################
 
 bash_completion () {
@@ -386,6 +386,17 @@ bash_completion () {
 
 }
 
+##########################
+# Func: Define environment vars 
+##########################
+
+bash_env () {
+
+	# SSH Host completion
+	export EDITOR="vim"
+	export SVN_EDITOR=vim
+
+}
 
 ##########################
 # Func: Command not found
@@ -545,6 +556,7 @@ shell_global_variable
 shell_global_color
 shell_ps1
 shell_command_not_found
+bash_env
 
 bash_alias
 bash_command_color
