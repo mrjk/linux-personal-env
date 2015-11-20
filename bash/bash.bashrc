@@ -28,27 +28,27 @@ shell_global_variable () {
 	##########################
 
 	# Regex to match IP
-	RGX_IP='(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'
-	RGX_IP='([0-2][0-9]{2}\.){3}'
+	export RGX_IP='(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)'
+	export RGX_IP='([0-2][0-9]{2}\.){3}'
 
 	# Regex to match emplty lines and comments ... use with grep -E -v
-	RGX_EL='^[[:blank:]]*#|^$'
+	export RGX_EL='^[[:blank:]]*#|^$'
 
 	# Match a username
-	RGX_USER='[a-z0-9-]'
+	export RGX_USER='[a-z0-9-]'
 
 	# Match a domain ANSI
-	RGX_DOM='([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}'
-	RGX_DOM='[a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z0-9-]{2,6}'
+	export RGX_DOM='([a-z][a-z0-9\-]+(\.|\-*\.))+[a-z]{2,6}'
+	export RGX_DOM='[a-z0-9-]+(\.[a-z0-9-]+)?\.[a-z0-9-]{2,6}'
 
 	# Match Hexadecimal, 
-	RGX_HEX='#?([a-f0-9]{6}|[a-f0-9]{3})'
+	export RGX_HEX='#?([a-f0-9]{6}|[a-f0-9]{3})'
 
 	# Match email
-	RGX_EMAIL='([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})'
+	export RGX_EMAIL='([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})'
 
 	# Match URL
-	RGX_URL='(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?'
+	export RGX_URL='(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?'
 }
 
 
@@ -448,13 +448,13 @@ bash_command_color () {
 	#export MANPAGER='/usr/bin/most -S'
 	export MANPAGER='/usr/bin/less'
 
-	LESS_TERMCAP_mb=$'\E[01;31m'
-	LESS_TERMCAP_us=$'\E[01;32m'
-	LESS_TERMCAP_md=$'\E[01;31m'
-	LESS_TERMCAP_se=$'\E[0m'
-	LESS_TERMCAP_so=$'\E[01;44;33m'
-	LESS_TERMCAP_ue=$'\E[0m'
-	LESS_TERMCAP_me=$'\E[0m'
+	export LESS_TERMCAP_mb=$'\E[01;31m'
+	export LESS_TERMCAP_us=$'\E[01;32m'
+	export LESS_TERMCAP_md=$'\E[01;31m'
+	export LESS_TERMCAP_se=$'\E[0m'
+	export LESS_TERMCAP_so=$'\E[01;44;33m'
+	export LESS_TERMCAP_ue=$'\E[0m'
+	export LESS_TERMCAP_me=$'\E[0m'
 
 
 	# Ajout log en couleurs
