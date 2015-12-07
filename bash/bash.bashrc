@@ -56,7 +56,7 @@ shell_global_variable () {
 # Func: Global color
 ##########################
 
-shell_global_color () {
+shell_simple_color () {
 	# Easy
 	export RED='\033[31m'
 	export GREEN='\033[32m'
@@ -70,6 +70,9 @@ shell_global_color () {
 	# Reset
 	export Color_Off='\e[0m'       # Text Reset
 
+}
+
+shell_advanced_color () {
 	# Regular Colors
 	export Black='\e[0;30m'        # Black
 	export Red='\e[0;31m'          # Red
@@ -484,6 +487,7 @@ bash_config () {
 	export HISTSIZE=10000
 	export HISTFILESIZE=2000
 
+	touch ~/.bash_history 2>/dev/null
 	if [ -w ~/.bash_history ]; then
 #		echo "Bash: enabling history file"
 		export HISTFILE=~/.bash_history
@@ -510,7 +514,7 @@ bash_config () {
 
 	# Synchronise history
 	shopt -s histappend
-	export PROMPT_COMMAND="history -a"
+	export PROMPT_COMMAND="history -a "
 
 	# Enable completion
 	if ! shopt -oq posix; then
@@ -553,7 +557,8 @@ esac
 
 # Preset
 shell_global_variable
-shell_global_color
+shell_simple_color
+#shell_advanced_color
 shell_ps1
 shell_command_not_found
 bash_env
