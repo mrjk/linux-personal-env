@@ -22,7 +22,9 @@ esac
 ##########################
 
 shell_global_variable () {
-	HOSTNAME=$(head -n 1 /etc/hostname)
+	if [ -f /etc/hostname ]; then
+		HOSTNAME=$(head -n 1 /etc/hostname)
+	fi
 
 	# Custom variables
 	##########################
