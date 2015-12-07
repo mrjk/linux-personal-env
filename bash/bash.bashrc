@@ -559,8 +559,8 @@ esac
 
 # Preset
 shell_global_variable
-shell_simple_color
-#shell_advanced_color
+#shell_simple_color
+shell_advanced_color
 shell_ps1
 shell_command_not_found
 bash_env
