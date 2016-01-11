@@ -340,6 +340,7 @@ bash_alias () {
 	alias vif='vim /etc/network/interfaces '
 	alias diff='colordiff '
 	alias tmount='mount |column -t '
+	alias tree='tree -C'
 
 	alias wgets='wget --no-check-certificate '
 	alias wgeth='wget --no-check-certificate -S -O /dev/null '
