@@ -1,0 +1,54 @@
+# To make it work on macos
+shell -$SHELL
+
+# Term config
+#term screen-256color
+#terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# Bindings
+bindkey "^[Od" prev  # change window with ctrl-left
+bindkey "^[Oc" next  # change window with ctrl-right
+
+bind o title
+bind E title ""
+bind u title (unknown)
+
+# Supprimedelete underlined lines in buffer list
+attrcolor d -d
+
+# TODO: Rajouter l'export et les infos de l'intervenant. Ca c'est cool :D
+# SFL, c'est pour l'exemple ;-)
+setenv STI SFL_OPS_NAME SFL_OPS_TYPE SFL_INFRA_ID
+
+# Vide l'écran apres nano par example
+#altscreen on
+
+# Autorise le scroll dans les xterm
+termcapinfo xterm*|xs|*rxvt ti@:te@
+
+# Display
+#backtick 1 15 15 /usr/local/bin/screen-info
+caption always "%{Yb} %02d-%02m-%Y %0c %{k}|%{C} %H %{k}| %1` |%{G} %{W}%n %{R}%t"
+
+# Memoire du buffer
+defscrollback 5000
+defscrollback 5000
+
+# Recover or kill zombie windows
+zombie kr
+
+# Disable startup message
+startup_message off
+
+# Disable underligned windows (Works?)
+attrcolor u "-u y"
+
+# Enable UTF8
+defutf8 on
+
+# Disable notifications
+bell_msg ""
+
+# no visual bell
+vbell off
+

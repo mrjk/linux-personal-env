@@ -1,0 +1,83 @@
+#[user]
+#        name = your_name
+#        email = your_mail
+[push]
+        default = matching
+[color]
+        ui = auto
+        diff = auto
+        status = auto
+        branch = auto
+        all = auto
+[color "diff"]
+        whitespace = "red reverse"
+
+[color "branch"]
+        remote = yellow
+
+[format]
+        pretty = %Cblue%h%Creset %ad %Cgreen%an%Creset %s%C(yellow)%d
+[alias]
+
+        # Simple Aliases
+        st = status -s
+        br = branch
+        bra = branch -av
+        co = checkout
+        cob = checkout -b
+        c = commit --verbose
+        cm = commit -m
+        rs = remote show
+        rso = remote show origin
+        wdiff = diff --color-words
+
+        subup = submodule update --init
+        tags = tag -l
+
+        # Mes persos
+        unstage = reset HEAD
+        rms = rm --cached
+        rmf = rm
+
+        l = log --graph --date=short --all --date-order
+        ll = log --stat --abbrev-commit --graph --all --date-order
+        sl = log --pretty=oneline --abbrev-commit --graph --decorate --all --date-order
+        la = "!git config -l | grep alias | cut -c 7-"
+        rao = remote add origin
+        sync = push -u origin --all
+        syncall = "!git fetch --all; git push -u origin --all"
+
+        wip = commit -am "WIP"
+        save = !git add -A && git commit -m 'SAVEPOINT'
+        wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
+        undo-commit = reset --soft HEAD~1
+        undo = reset HEAD~1 --mixed
+
+        # Advanced aliases
+        # quick-amend = !VISUAL=/bin/true git commit --amend
+        # sync = !git pull --rebase && git push
+        # merge-to = "!f() { local DEST=$1 ; shift ; local CURRENT=`git rev-parse --abbrev-ref HEAD` && git checkout "$DEST" && git merge "$CURRENT" $@ && git checkout "$CURRENT"; unset CURRENT; }; f"
+        # ml = log --pretty=medium --abbrev-commit --graph --decorate --all --date-order
+        # hist = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+
+        # a = add
+        # ap = add -p
+        # ca = commit -a --verbose
+        # cam = commit -a -m
+        # m = commit --amend --verbose
+        #
+        # d = diff
+        # ds = diff --stat
+        # dc = diff --cached
+        #
+        # # list branches sorted by last modified
+        # b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+        #
+
+
+[core]
+        pager = less -x2
+
+
